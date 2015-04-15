@@ -13,7 +13,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 from contrail_vrouter_api.vrouter_api import ContrailVRouterApi
-from nova.i18n import _
+from nova.openstack.common.gettextutils import _
 from nova.network import linux_net
 from nova import utils
 from nova.openstack.common import log as logging
