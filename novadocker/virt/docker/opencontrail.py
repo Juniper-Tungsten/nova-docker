@@ -12,11 +12,12 @@
 #    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 #    License for the specific language governing permissions and limitations
 #    under the License.
-from contrail_vrouter_api.vrouter_api import ContrailVRouterApi
-from nova.openstack.common.gettextutils import _
-from nova.network import linux_net
 from nova import utils
+from nova.network import linux_net
 from nova.openstack.common import log as logging
+from nova.openstack.common.gettextutils import _
+
+from contrail_vrouter_api.vrouter_api import ContrailVRouterApi
 
 LOG = logging.getLogger(__name__)
 
