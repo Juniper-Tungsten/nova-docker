@@ -60,6 +60,8 @@ class OpenContrailVIFDriver(object):
         if_remote_name = 'ns%s' % vif['id'][:8]
 
         undo_mgr = utils.UndoManager()
+        undo_mgr.undo_with(lambda: utils.execute(
+            'ip', 'link', 'delete', if_local_name, run_as_root=True))
         ipv4_address = '0.0.0.0'
         ipv6_address = None
         if 'subnets' in vif['network']:
