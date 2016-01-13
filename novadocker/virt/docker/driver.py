@@ -189,7 +189,7 @@ class DockerDriver(driver.ComputeDriver):
 
     def detach_interface(self, instance, vif):
         """Detach an interface from the container."""
-        self.vif_driver.unplug(instance, vif
+        self.vif_driver.unplug(instance, vif)
 
     def plug_vifs(self, instance, network_info):
         """Plug VIFs into networks."""
