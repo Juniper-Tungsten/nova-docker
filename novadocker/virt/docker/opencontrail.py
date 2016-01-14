@@ -15,8 +15,6 @@
 
 import eventlet
 
-from contrail_vrouter_api.vrouter_api import ContrailVRouterApi
-
 from nova.network import linux_net
 from nova.i18n import _
 from nova.openstack.common import log as logging
