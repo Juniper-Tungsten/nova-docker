@@ -13,12 +13,11 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-import eventlet
-
 from nova.network import linux_net
 from nova.i18n import _
-from oslo_log import log as logging
 from nova import utils
+
+from oslo_log import log as logging
 
 
 LOG = logging.getLogger(__name__)
@@ -69,11 +68,11 @@ class OpenContrailVIFDriver(object):
         cmd_args = ("--oper=add --uuid=%s --instance_uuid=%s --vn_uuid=%s "
                     "--vm_project_uuid=%s --ip_address=%s --ipv6_address=%s"
                     " --vm_name=%s --mac=%s --tap_name=%s --port_type=%s "
-                    "--tx_vlan_id=%d --rx_vlan_id=%d" % (vif['id'],
-                    instance.uuid, vif['network']['id'],
-                    instance.project_id, ipv4_address, ipv6_address,
-                    instance.display_name, vif['address'],
-                    if_local_name, ptype, -1, -1))
+                    "--tx_vlan_id=%d --rx_vlan_id=%d" % (
+                        vif['id'], instance.uuid, vif['network']['id'],
+                        instance.project_id, ipv4_address, ipv6_address,
+                        instance.display_name, vif['address'],
+                        if_local_name, ptype, -1, -1))
 
         utils.execute('vrouter-port-control', cmd_args, run_as_root=True)
 
