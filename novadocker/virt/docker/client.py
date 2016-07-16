@@ -25,7 +25,7 @@ from docker import tls
 
 CONF = cfg.CONF
 DEFAULT_TIMEOUT_SECONDS = 120
-DEFAULT_DOCKER_API_VERSION = '1.19'
+DEFAULT_DOCKER_API_VERSION = '1.18'
 
 
 def filter_data(f):
